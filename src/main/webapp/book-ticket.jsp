@@ -53,7 +53,7 @@ span.psw {
 </head>
 <body>
 	<h1>Book Ticket</h1>
-	<form action="Register" method="post">
+	<form action="register" method="post">
 	  <div class="container">
 	    
 		<label><b>First Name</b></label>
