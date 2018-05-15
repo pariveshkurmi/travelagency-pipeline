@@ -1,2 +1,1 @@
-# travelagency-pipeline
-Integrated Learning Pipeline Project 
+# ILP-Pipeline

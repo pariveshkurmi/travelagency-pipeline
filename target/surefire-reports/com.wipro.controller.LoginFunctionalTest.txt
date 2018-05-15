@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.wipro.controller.LoginFunctionalTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 33.176 sec <<< FAILURE! - in com.wipro.controller.LoginFunctionalTest
+com.wipro.controller.LoginFunctionalTest  Time elapsed: 33.175 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:40785 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.5.2', revision: '10229a9', time: '2017-08-21T17:29:55.15Z'
+System info: host: 'PARIVESH-PC', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: FirefoxDriver
+	at com.wipro.controller.LoginFunctionalTest.setup(LoginFunctionalTest.java:35)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:40785 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at com.wipro.controller.LoginFunctionalTest.setup(LoginFunctionalTest.java:35)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.wipro.controller.LoginFunctionalTest.setup(LoginFunctionalTest.java:35)
+
+com.wipro.controller.LoginFunctionalTest  Time elapsed: 33.175 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.wipro.controller.LoginFunctionalTest.cleanUp(LoginFunctionalTest.java:40)
+
