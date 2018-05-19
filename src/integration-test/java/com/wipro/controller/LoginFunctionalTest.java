@@ -5,8 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
 
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -22,8 +26,14 @@ public class LoginFunctionalTest {
 	public static void setup() {
 		//System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/travelagency-pipeline/chromedriver.exe");
-		ChromeDriverManager.getInstance().setup();
-		driver = new ChromeDriver();
+		
+		FirefoxDriverManager.getInstance().setup();
+		FirefoxBinary binary = new FirefoxBinary();
+		binary.addCommandLineOptions("..headless");
+		// driver = new ChromeDriver();
+		FirefoxOptions firefoxOptions = new FirefoxOptions();
+		firefoxOptions.setBinary(binary);
+		driver = new FirefoxDriver();
 
 	}
 
