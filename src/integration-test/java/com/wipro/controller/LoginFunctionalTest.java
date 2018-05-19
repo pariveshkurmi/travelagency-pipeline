@@ -27,7 +27,7 @@ public class LoginFunctionalTest {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
 		chromeOptions.setBinary("/var/jenkins_home/driver/chrome.exe");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(chromeOptions);
 
 	}
 
