@@ -18,7 +18,9 @@ public class LoginFunctionalTest {
 
 	@BeforeClass
 	public static void setup() {
-		System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/workspace/travelagency-pipeline/chromedriver.exe");
+		
 		driver = new ChromeDriver();
 
 	}
@@ -30,7 +32,7 @@ public class LoginFunctionalTest {
 
 	@Test
 	public void loginSuccess() {
-		driver.get("http://localhost:6080/integratedlearningproject/index.jsp");
+		driver.get("http://192.168.99.100:6080/integratedlearningproject/index.jsp");
 		WebElement email = driver.findElement(By.name("email"));
 		WebElement pass = driver.findElement(By.name("password"));
 		WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));
