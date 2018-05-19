@@ -19,7 +19,7 @@ public class LoginFunctionalTest {
 	@BeforeClass
 	public static void setup() {
 		//System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/workspace/travelagency-pipeline/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver.exe");
 		
 		driver = new ChromeDriver();
 
