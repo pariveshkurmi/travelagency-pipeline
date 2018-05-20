@@ -23,11 +23,12 @@ public class LoginFunctionalTest {
 	public static void setup() {
 		//System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/travelagency-pipeline/chromedriver.exe");
-		ChromeDriverManager.getInstance().setup();
+		/*ChromeDriverManager.getInstance().setup();
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
-		chromeOptions.setBinary("/var/jenkins_home/driver/chrome.exe");
-		driver = new ChromeDriver(chromeOptions);
+		chromeOptions.setBinary("/var/jenkins_home/driver/chrome.exe");*/
+		
+		driver = new ChromeDriver();
 
 	}
 
