@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 
@@ -14,19 +15,19 @@ import static org.junit.Assert.*;
 
 import org.junit.experimental.categories.Category;
 
-@Category(IntegrationTest.class)
+//@Category(IntegrationTest.class)
 public class LoginFunctionalTest {
 
-	static WebDriver driver;
+	/*static WebDriver driver;
 
 	@BeforeClass
 	public static void setup() {
 		//System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/driver/chromedriver");
-		/*ChromeDriverManager.getInstance().setup();
+		System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver_win32\\chromedriver.exe");
+		ChromeDriverManager.getInstance().setup();
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
-		chromeOptions.setBinary("/var/jenkins_home/driver/chrome.exe");*/
+		chromeOptions.setBinary("/var/jenkins_home/driver/chrome.exe");
 		
 		driver = new ChromeDriver();
 
@@ -36,8 +37,26 @@ public class LoginFunctionalTest {
 	public static void cleanUp() {
 		driver.quit();
 	}
-
+	
 	@Test
+	public void oneTest() {
+		driver.get("http://www.xcelnetwork.in");
+		WebElement email = driver.findElement(By.className("uname"));
+		WebElement pass = driver.findElement(By.className("youpasswd"));
+		WebElement button = driver.findElement(By.xpath("//input[@value='Log In']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(email);
+		actions.click();
+		actions.sendKeys("SFC26052018599");
+		actions.build().perform();
+		actions.moveToElement(pass);
+		actions.click();
+		actions.sendKeys("YfeZe");
+		actions.build().perform();
+		button.click();
+	}
+
+	//@Test
 	public void loginSuccess() {
 		driver.get("http://192.168.99.100:6080/integratedlearningproject/index.jsp");
 		WebElement email = driver.findElement(By.name("email"));
@@ -59,7 +78,7 @@ public class LoginFunctionalTest {
 		pass.sendKeys("1234");
 		button.click();
 		assertTrue(driver.getPageSource().contains("Invalid username or password, Please try again with valid"));
-	}
+	}*/
 
 	/*
 	 * @Test public void registrationSuccess() {
